@@ -1,7 +1,7 @@
 import axios from 'axios';
 const api = axios.create(
     {
-    baseURL : 'https://shopandbuy-backend.onrender.com/admin'
+    baseURL : 'import.meta.env.VITE_BACKEND_URL'
     }
 )
 
