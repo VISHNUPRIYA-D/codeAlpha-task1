@@ -116,6 +116,8 @@ const Home = () => {
           <option value="pant">Pants</option>
           <option value="Shirts">Shirts</option>
           <option value="Jeans">Jeans</option>
+          <option value="Pajama">Pajama</option>
+          <option value="Sweater">Sweater</option>
           <option value="Hoodies">Hoodies</option>
           <option value="Jackets">Jackets</option>
           <option value="Sneakers">Sneakers</option>
