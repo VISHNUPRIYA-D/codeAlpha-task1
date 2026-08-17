@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-     <Navbar className="fixed"/>
+     <Navbar className="fixed z-100"/>
      <Routes>
        <Route path='/home' element={<Home/>}/>
        <Route path='/orders' element={<Orders/>}/>
