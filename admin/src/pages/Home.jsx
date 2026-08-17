@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const { handleChange, handleSubmit, image, setImage, data, setData,editMode,setEditMode,getSingleProduct } =
     useContext(adminContext);
-    const navigate = useNavigate();
+    let navigate = useNavigate();
 
   return (
     <div className="text-xs sm:text-[15px]">
@@ -229,9 +229,8 @@ const Home = () => {
        {editMode? "Update Product" : "Add Product" } 
       </button>
       {editMode && <button
-        type="submit"
         className="bg-white border border-gray-300 px-3 py-1 sm:px-8 sm:py-3 rounded hover:bg-gray-300"
-        onClick={()=>{setEditMode(!editMode)
+        onClick={()=>{setEditMode(false)
           navigate("/products");
           setData({productName: "",
         description: "",

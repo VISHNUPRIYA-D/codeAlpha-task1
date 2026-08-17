@@ -15,7 +15,7 @@ import img7 from "../assets/img7.jpeg";
 import img8 from "../assets/img8.jpeg";
 import img9 from "../assets/img9.jpeg";
 import img10 from "../assets/img10.jpg";
-import img11 from "../assets/img11.jpeg";
+
 import img12 from "../assets/img12.jpeg";
 import img13 from "../assets/img13.jpeg";
 import img14 from "../assets/img14.jpeg";
@@ -35,7 +35,6 @@ const images = [
   img8,
   img9,
   img10,
-  img11,
   img12,
   img13,
   img14,
@@ -47,7 +46,7 @@ const images = [
 
 const HeroSlide = () => {
   return (
-    <div className="w-full flex justify-center mt-4">
+    <div className="w-full flex justify-center mt-4 px-4 md:px-6">
       <Swiper
         modules={[Autoplay, Navigation, Pagination]}
         autoplay={{
@@ -60,7 +59,7 @@ const HeroSlide = () => {
         loop
         speed={800}
         spaceBetween={20}
-        className="w-[95%] h-[220px] sm:h-[350px] md:h-[500px] lg:h-[600px] rounded-2xl shadow-xl"
+        className="hero-swiper h-[150px] sm:h-[250px] md:h-[300px] lg:h-[500px] rounded-2xl shadow-xl"
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>

@@ -25,10 +25,10 @@ const uploadImage = (buffer) => {
 const addProduct = async(req,res)=>{
     try{
         const {productName,price,category,subCategory,brand,color,size,inStock,description,bestSeller} = req.body;
-        size = JSON.parse(size);
+        const parsedSize = JSON.parse(size);
         const result = await uploadImage(req.file.buffer);
         const newProduct =new productModel({
-            productName,price,category,subCategory,productImage:result.secure_url,brand,color,size,inStock,description,bestSeller
+            productName,price,category,subCategory,productImage:result.secure_url,brand,color,size:parsedSize,inStock,description,bestSeller
         });
 
         console.log(req.body);

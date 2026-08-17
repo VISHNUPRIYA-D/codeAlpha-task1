@@ -23,19 +23,20 @@ const ProductCard = ({products})=>{
             <img
               src={item.productImage}
               alt={item.productName}
-              className="w-full h-56 object-cover rounded-md"
+              className="w-full h-30 sm:h-56 object-cover rounded-md"
             />
 
             <div>
-              <h2 className="font-semibold line-clamp-2 mt-2">{item.productName}</h2>
-              <p className="sm:text-xs">
+              <p className="text-base sm:text-lg font-bold text-green-700 mt-2 ">₹{item.price}</p>
+              <h2 className="text-xs sm:text-base font-semibold line-clamp-2 ">{item.productName}</h2>
+              <p className="text-xs sm:text-sm">
                 {item.description?.length > 30
                   ? item.description.slice(0,30) + "..."
                   : item.description}
               </p>
 
              
-              <p className="text-lg font-bold text-green-700 mt-2">₹{item.price}</p>
+              
             </div>
             
           </div>

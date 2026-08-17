@@ -1,1 +1,54 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+/* Swiper navigation arrows */
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  width: 28px;
+  height: 28px;
+}
+
+/* Arrow icon size */
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Smaller arrows on mobile */
+@media (max-width: 640px) {
+  .hero-swiper .swiper-button-next,
+  .hero-swiper .swiper-button-prev {
+    width: 22px;
+    height: 22px;
+  }
+
+  .hero-swiper .swiper-button-next::after,
+  .hero-swiper .swiper-button-prev::after {
+    font-size: 12px;
+  }
+}
+
+/* Pagination dots */
+.hero-swiper .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  opacity: 0.7;
+}
+
+/* Active pagination dot */
+.hero-swiper .swiper-pagination-bullet-active {
+  width: 18px;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+/* Smaller pagination on mobile */
+@media (max-width: 640px) {
+  .hero-swiper .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+  }
+
+  .hero-swiper .swiper-pagination-bullet-active {
+    width: 14px;
+  }
+}

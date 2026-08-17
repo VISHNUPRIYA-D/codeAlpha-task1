@@ -16,14 +16,14 @@ const Navbar = () => {
   {dropDown && setShowCategory(false)}
   return (
     <div className="fixed w-full h-10 z-100 sm:h-15 bg-[#d4de95] shadow-md shadow-[#b0b974]">
-          <div className="flex max-w-full justify-between mx-3 md:mx-8 gap-2">
-            <img src={logo} alt="logo" className="w-10 h-10 sm:w-15 sm:h-15 mt-1 " onClick={()=>navigate("/home")} />
+          <div className="flex max-w-full justify-between mx-2 md:mx-8 gap-2">
+            <img src={logo} alt="logo" className="w-8 h-8 sm:w-15 sm:h-15 mt-1 " onClick={()=>navigate("/home")} />
             
             {/* Search  */}
             <div className="flex">
               <input
                 type="text"
-                className="border-b-amber-50 rounded-2xl text-[12px] sm:text-xs  bg-white pr-2 pl-6 sm:pl-10 my-3 sm:my-3.5 h-5 sm:h-7 w-32 md:w-96 xl:w-2xl"
+                className="border-b-amber-50 rounded-2xl text-xs sm:text-sm  bg-gray-100 pr-2 pl-6 sm:pl-10 my-3.5 sm:my-4 h-4 sm:h-5.5 w-32 md:w-56 lg:w-80 xl:w-xl"
                 value={search}
                 onChange={(e)=>setSearch(e.target.value)}
                 onKeyDown={(e)=>{
@@ -33,7 +33,7 @@ const Navbar = () => {
                   }
                 }}
               />
-              <FaSearch className="fixed my-4 sm:my-5 text-xs md:text-xl ml-2 text-blue-950" onClick={()=>{
+              <FaSearch className="fixed my-4 sm:my-5 text-xs md:text-base ml-1 sm:ml-2 text-blue-950" onClick={()=>{
                 navigate('/products');
               }}/>
             </div>
@@ -41,8 +41,8 @@ const Navbar = () => {
             <div className="flex ">
               <p onClick={()=>{setShowCategory(!showCategory)
                 
-              }} className="cursor-pointer">Categories</p>
-              <IoIosArrowDown className={`block md:hidden my-1.5 cursor-pointer ${dropDown? "rotate-180" : "rotate-0"} `} onClick={()=>{
+              }} className="cursor-pointer text-xs lg:text-base">Categories</p>
+              <IoIosArrowDown className={`block md:hidden mx-4 my-1 cursor-pointer ${dropDown? "rotate-180" : "rotate-0"} `} onClick={()=>{
                 setDropDown(!dropDown)
                 setShowBrands(false)
                 
@@ -53,12 +53,12 @@ const Navbar = () => {
             
 
             {dropDown ? <Dropdown />:
-            <div className="hidden md:flex gap-5">
+            <div className="hidden md:flex gap-5 text-xs lg:text-base">
 
             <p onClick={()=>navigate("/bestSeller")} className="cursor-pointer" >BestSeller</p>
             <p onClick={()=>{setShowBrands(!showBrands) 
               console.log("brands")}} className="cursor-pointer">Brands</p>
-            <p onClick={()=>navigate("/newArrivals")} className="cursor-pointer">New Arrivals</p>
+            <p onClick={()=>navigate("/newArrivals")} className="cursor-pointer text-center">New Arrivals</p>
             </div>}
             
           </div>
