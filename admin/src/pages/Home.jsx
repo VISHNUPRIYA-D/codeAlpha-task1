@@ -110,6 +110,7 @@ const Home = () => {
           required
         >
           <option value="">Select Sub Category</option>
+          <option value="">Dress</option>
           <option value="T-Shirts">T-Shirts</option>
           <option value="Tops">Tops</option>
           <option value="pant">Pants</option>
