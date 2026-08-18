@@ -22,7 +22,7 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="pt-20 sm:pt-32 px-6 z-10">
+    <div className="pt-15 sm:pt-20 px-6 z-10">
       <h1 className="text-2xl font-bold mb-5">Products</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 gap-4">
         {products.map((item) => (
