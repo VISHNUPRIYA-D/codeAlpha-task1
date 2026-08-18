@@ -47,8 +47,8 @@ const Signup = () => {
             </label>
 
             <input
-              type="email"
-              name="email"
+              type="text"
+              name="name"
               value={signupData.name}
               onChange={(e) =>
                 setSignupData({
