@@ -11,7 +11,7 @@ const Navbar = () => {
   const {search,setSearch,searchProduct} = useContext(adminContext);
   const navigate = useNavigate();
   return (
-    <div className="fixed w-full h-10  sm:h-15 bg-[#d4de95] shadow-xl shadow-[#b0b974]">
+    <div className="sticky top-0 w-full h-10  sm:h-15 bg-[#d4de95] shadow-xl shadow-[#b0b974]">
       <div className="flex max-w-full justify-between mx-3 md:mx-8 ">
         <img src={logo} alt="logo" className="w-8 h-8 sm:w-15 sm:h-15 mt-1 " />
         
