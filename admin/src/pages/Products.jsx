@@ -52,7 +52,7 @@ const Products = () => {
               </p>
               <p>{item.category}</p>
             </div>
-            <div className="absolute top-3 right-3 flex gap-3 cursor-pointer">
+            <div className="top-3 right-3 flex gap-3 cursor-pointer">
               <FaEdit
                 onClick={() => {
                     console.log(item.size);
