@@ -110,11 +110,14 @@ const Home = () => {
           required
         >
           <option value="">Select Sub Category</option>
+          <option value="Dress">Dress</option>
           <option value="T-Shirts">T-Shirts</option>
           <option value="Tops">Tops</option>
           <option value="pant">Pants</option>
           <option value="Shirts">Shirts</option>
           <option value="Jeans">Jeans</option>
+          <option value="Pajama">Pajama</option>
+          <option value="Sweater">Sweater</option>
           <option value="Hoodies">Hoodies</option>
           <option value="Jackets">Jackets</option>
           <option value="Sneakers">Sneakers</option>

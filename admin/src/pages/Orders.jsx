@@ -10,7 +10,7 @@ const Orders = () => {
   }, []);
 
   return (
-    <div className="pt-24 px-6">
+    <div className="pt-18 sm:pt-24 px-6">
       <h1 className="text-xl sm:text-2xl font-bold mb-6">Orders</h1>
       <div className="grid  sm:grid-cols-2 md:grid-cols-3 gap-4">
       {orders.map((order) => (
