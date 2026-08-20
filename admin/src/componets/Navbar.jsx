@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="flex">
           <input
             type="text"
-            className="border-b-amber-50 rounded-2xl text-[12px] sm:text-xs  bg-white pr-2 pl-6 sm:pl-10 my-3 sm:my-3.5 h-4 sm:h-7 w-36 md:w-96 xl:w-2xl"
+            className="border-b-amber-50 rounded-2xl text-[12px] sm:text-xs  bg-white pr-2 pl-6 sm:pl-10 my-3 sm:my-3.5 h-4 sm:h-7 w-72 md:w-96 xl:w-2xl"
             value={search}
             onChange={(e)=>setSearch(e.target.value)}
             onKeyDown={(e)=>{
