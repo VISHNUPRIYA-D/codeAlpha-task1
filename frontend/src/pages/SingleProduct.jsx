@@ -161,9 +161,8 @@ const SingleProduct = () => {
   </h2>
 
   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    {relatedProducts.map((product) => (
-      <ProductCard key={product._id} product={product} />
-    ))}
+    
+      <ProductCard products={relatedProducts} />
   </div>
 </div>
 
