@@ -15,7 +15,7 @@ import poster7 from "../assets/posters/poster7.jpeg";
 const Home = () => {
   const { products, getAllProducts } = useContext(userContext);
   let date = new Date();
-  date = date.getFullYear();
+  let year = date.getFullYear();
   useEffect(() => {
     getAllProducts();
   }, []);
@@ -77,7 +77,7 @@ const Home = () => {
         <h2 className="font-bold text-xs sm:text-lg">Shop & Buy</h2>
 
         <p className="text-xs sm:text-sm text-gray-400 mt-2">
-          © {date} Shop & Buy. All Rights Reserved.
+          © {year} Shop & Buy. All Rights Reserved.
         </p>
       </footer>
     </div>
