@@ -8,6 +8,13 @@ const Home = () => {
   const { handleChange, handleSubmit, image, setImage, data, setData,editMode,setEditMode,getSingleProduct } =
     useContext(adminContext);
     let navigate = useNavigate();
+  const subCategories = {
+  Men : ["Shirts","Pants","Trousers","T-Shirt","Sweater","Hoodie","Jacket","Jean","Vesti","Pajama"],
+  Women : ["Saree","Kurthi","T-Shirt","Shirts","Pants","Shorts","Sweater","Hoodie","Night suit","Pajama","Jacket","Jean","Crop Top","Frog","Long Top"],
+  Kids:["T-Shirts", "Shirts", "Jeans", "Pajama", "Sweater", "Hoodies", "Jackets","Dress"],
+  Footwears:["Sandles","Formal Shoe","Casual Shoe"],
+  Accessories:["Chains","Watch","Earring","Ring","Braclet","Necklesh"]
+  }
 
   return (
     <div className="text-xs sm:text-[15px]">
@@ -93,7 +100,7 @@ const Home = () => {
           <option value="Men">Men</option>
           <option value="Women">Women</option>
           <option value="Kids">Kids</option>
-          <option value="Shoes">Shoes</option>
+          <option value="Shoes">Footwears</option>
           <option value="Accessories">Accessories</option>
         </select>
       </div>
@@ -110,21 +117,9 @@ const Home = () => {
           required
         >
           <option value="">Select Sub Category</option>
-          <option value="Dress">Dress</option>
-          <option value="T-Shirts">T-Shirts</option>
-          <option value="Tops">Tops</option>
-          <option value="pant">Pants</option>
-          <option value="Shirts">Shirts</option>
-          <option value="Jeans">Jeans</option>
-          <option value="Pajama">Pajama</option>
-          <option value="Sweater">Sweater</option>
-          <option value="Hoodies">Hoodies</option>
-          <option value="Jackets">Jackets</option>
-          <option value="Sneakers">Sneakers</option>
-          <option value="Sandals">Sandals</option>
-          <option value="formalShoes">Formal Shoes</option>
-          <option value="Bags">Bags</option>
-          <option value="Watches">Watches</option>
+          {(subCategories[data.category] || []).map((subCategory)=>(
+          <option value={subCategory} >{subCategory}</option>  
+        ))}
         </select>
       </div>
 
