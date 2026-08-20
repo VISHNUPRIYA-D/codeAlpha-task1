@@ -100,7 +100,7 @@ const Home = () => {
           <option value="Men">Men</option>
           <option value="Women">Women</option>
           <option value="Kids">Kids</option>
-          <option value="Shoes">Footwears</option>
+          <option value="Footwears">Footwears</option>
           <option value="Accessories">Accessories</option>
         </select>
       </div>
