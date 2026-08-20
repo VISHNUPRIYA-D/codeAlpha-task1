@@ -27,7 +27,7 @@ const Home = () => {
         <h2 className="text-xl md:text-3xl font-bold text-center">
           Featured Products
         </h2>
-        <ProductCard products={products.slice(0, 8)} />
+        <ProductCard products={products.slice(0, 12)} />
       </section>
 
       <section className="block sm:flex w-[95%] gap-1 md:gap-4 my-5 sm:my-12 px-3 sm:px-10 ">
@@ -43,7 +43,7 @@ const Home = () => {
 
       <section className="mt-8 sm:mt-12">
         <h2 className="text-xl md:text-3xl font-bold text-center">Brands</h2>
-        <ProductCard products={products.slice(8, 16)} />
+        <ProductCard products={products.slice(12, 24)} />
       </section>
 
       <section className=" my-5 sm:my-12 px-3 sm:px-10 ">
@@ -54,7 +54,7 @@ const Home = () => {
         <h2 className="text-xl md:text-3xl font-bold text-center">
           New Arrivals
         </h2>
-        <ProductCard products={products.slice(16)} />
+        <ProductCard products={products.slice(24)} />
       </section>
 
       <section className=" my-5 sm:my-12 px-3 sm:px-10 overflow-hidden">
