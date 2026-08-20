@@ -14,7 +14,7 @@ const Home = () => {
   Women : ["Saree","Kurthi","T-Shirt","Shirts","Pants","Shorts","Sweater","Hoodie","Night suit","Pajama","Jacket","Jean","Crop Top","Frog","Long Top"],
   Kids:["T-Shirts", "Shirts", "Jeans", "Pajama", "Sweater", "Hoodies", "Jackets","Dress"],
   Footwears:["Sandles","Formal Shoe","Casual Shoe"],
-  Accessories:["Chains","Watch","Earring","Ring","Braclet","Necklesh"]
+  Accessories:["Chains","Watch","Earring","Ring","Braclet","Necklesh","Handbag"]
   }
   useEffect(() => {
   if (data.category === "Accessories") {
