@@ -8,6 +8,7 @@ const Home = () => {
   const { handleChange, handleSubmit, image, setImage, data, setData,editMode,setEditMode,getSingleProduct } =
     useContext(adminContext);
     let navigate = useNavigate();
+  
   const subCategories = {
   Men : ["Shirts","Pants","Trousers","T-Shirt","Sweater","Hoodie","Jacket","Jean","Vesti","Pajama"],
   Women : ["Saree","Kurthi","T-Shirt","Shirts","Pants","Shorts","Sweater","Hoodie","Night suit","Pajama","Jacket","Jean","Crop Top","Frog","Long Top"],
@@ -15,6 +16,14 @@ const Home = () => {
   Footwears:["Sandles","Formal Shoe","Casual Shoe"],
   Accessories:["Chains","Watch","Earring","Ring","Braclet","Necklesh"]
   }
+  useEffect(() => {
+  if (data.category === "Accessories") {
+    setData((prev) => ({
+      ...prev,
+      size: [],
+    }));
+  }
+}, [data.category, setData]);
 
   return (
     <div className="text-xs sm:text-[15px]">
@@ -39,7 +48,7 @@ const Home = () => {
           accept="image/*"
           onChange={(e) => setImage(e.target.files[0])}
           className="w-full border rounded p-1 sm:p-2 mt-1 sm:mt-2"
-          required
+          required={!editMode}
         />
       </div>
 
@@ -154,7 +163,7 @@ const Home = () => {
       <div>
         <label className="font-medium block mb-1 sm:mb-2">Available Sizes</label>
 
-        <div className="flex flex-wrap gap-2 sm:gap-4">
+        <div className={` ${data.category==="Accessories"? "hidden":""} flex flex-wrap gap-2 sm:gap-4`}>
 
           {["XS","S","M","L","XL","XXL"].map((size) => (
 
